@@ -1,0 +1,58 @@
+.modal {
+  max-width: 100% !important;
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    font-size: 48px;
+    line-height: 24px;
+    text-align: center;
+    background: none;
+    border: none;
+    color: #BDBDBD;
+    box-shadow: none;
+    transition: all @transition-speed-default;
+
+    svg {
+      .positionCenter();
+      fill: currentColor;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus {
+      // color: @colorHighlightDark;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__title {
+    margin: 0 0 50px;
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0 0 40px;
+
+    p {
+      margin: 0 0 20px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__content {
+    padding: 80px 55px;
+  }
+}

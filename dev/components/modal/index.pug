@@ -1,0 +1,24 @@
+include ../form/index.pug
+
+mixin modalCall(data)
+  +b.modal._size-fix(data-modal='callback')
+    +e.BUTTON.close(data-izimodal-close)
+      +svg({
+        name: 'close'
+      })
+    +e.content
+      +e.title
+        +b.SPAN.title._size-s Заказать звонок
+      +formCall
+    +e.content._hidden._center
+      +e.title
+        +b.SPAN.title._size-s Сообщение отправлено!
+      +e.text
+        p Спасибо за Ваше обращение, в ближайшее время мы свяжемся с Вами.
+        p. 
+          Или позвоните прямо сейчас по телефону: 
+          <a class="tel" href="tel:+79130817722">+7 913 081 77 22</a>
+      +b.BUTTON.button(data-izimodal-close)
+        span Хорошо
+
+      

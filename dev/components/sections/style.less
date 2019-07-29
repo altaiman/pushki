@@ -1,0 +1,231 @@
+@import url('welcome/style.less');
+@import url('slider/style.less');
+@import url('gallery/style.less');
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  transition: all .4s;
+
+  &__title_gallery {
+    position: absolute;
+    left: 9.4vw;
+    top: 19vh;
+    padding: .5vh 6.44vw 3.5vh;
+    font-size: 9.5rem;
+    font-weight: bold;
+    background: #FFD600;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      right: 8.5vw;
+      width: 8.8vw;
+      height: 44.5vh;
+      content: '';
+      transform: rotate(-90deg);
+      background-image: url('../img/welcome-bg.svg');
+      background-repeat: no-repeat;
+      pointer-events: none;
+      margin-left: -1px;
+    }
+  }
+
+  &__title-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    &::before {
+      position: absolute;
+      bottom: 100%;
+      right: .5vw;
+      margin-bottom: 2.8vh;
+      width: 29.8vw;
+      height: 11.2vh;
+      content: '';
+      background-image: url('../img/title-before.svg');
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      position: absolute;
+      top: 100%;
+      right: .5vw;
+      margin-top: 1.4vh;
+      width: 35.8vw;
+      height: 28.8vh;
+      content: '';
+      background-image: url('../img/title-after.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 7vw;
+    bottom: 7vh;
+    width: 36.5vw;
+  }
+
+  &__side {
+    position: relative;
+    padding-top: 4.7%;
+    padding-left: 6.25%;
+    width: 41.5%;
+    height: 100%;
+    background-color: #FFD600;
+
+    &::before {
+      position: absolute;
+      left: 100%;
+      top: 3vh;
+      width: 13.2vw;
+      height: 69.3vh;
+      content: '';
+      background-image: url('../img/welcome-bg.svg');
+      background-repeat: no-repeat;
+      pointer-events: none;
+      margin-left: -1px;
+
+    }
+  }
+
+  &__main {
+    width: 100%;
+  }
+
+  &__main_with-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 58.5%;
+  }
+
+  &__top-buttons {
+    position: absolute;
+    left: 5.5vw;
+    top: 2vh;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__bottom-link {
+    position: absolute;
+    left: 6.25vw;
+    bottom: 3vh;
+    padding-left: 2vw;
+
+    &::before {
+      position: absolute;
+      left: -1vw;
+      bottom: -1.3vh;
+      width: 2vw;
+      height: 13.7vh;
+      content: '';
+      background-image: url('../img/arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      transition: all .4s;
+    }
+  }
+
+  &__gallery {
+    width: 50vw;
+    margin: 0 0 0 auto;
+    padding-right: 7vw;
+  }
+}
+
+.section_welcome {
+  position: relative;
+  margin-bottom: 9vh;
+  height: 100vh;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    z-index: 3;
+    left: -.5%;
+    right: -.5%;
+    bottom: -1px;
+    height: 3px;
+    width: 101%;
+    content: '';
+    background-size: 6.21vw;
+    background-image: linear-gradient(to right,
+      rgba(119,119,119,1) 0%,
+      rgba(119,119,119,1) 25%,
+      rgba(119,119,119,0) 25%,
+      rgba(119,119,119,0) 50%,
+      rgba(119,119,119,1) 50%,
+      rgba(119,119,119,1) 75%,
+      rgba(119,119,119,0) 75%,
+      rgba(119,119,119,0) 100%);
+  }
+}
+
+.section_slider {
+  position: relative;
+  height: 134vh;
+  background-color: #1B9373;
+  border-bottom: 10vh solid #12604A;
+
+  &::before {
+    position: absolute;
+    left: -.25vw;
+    top: 50%;
+    margin-top: 2vh;
+    transform: translateY(-50%);
+    content: '';
+    height: 100vh;
+    width: 11vw;
+    background-image: url('../img/slider-before.svg');
+    background-position: center left;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    right: -.5vw;
+    top: 50%;
+    margin-top: 2vh;
+    transform: translateY(-50%);
+    content: '';
+    height: 103vh;
+    width: 9.5vw;
+    background-image: url('../img/slider-after.svg');
+    background-position: center left;
+    background-repeat: no-repeat;
+  }
+}
+
+.section_gallery {
+  position: relative;
+  height: 100vh;
+  padding: 19vh 0 7vh;
+
+  &::before {
+    position: absolute;
+    z-index: 3;
+    left: -.5%;
+    right: -.5%;
+    bottom: -1px;
+    height: 3px;
+    width: 101%;
+    content: '';
+    background-size: 6.21vw;
+    background-image: linear-gradient(to right,
+      rgba(119,119,119,1) 0%,
+      rgba(119,119,119,1) 25%,
+      rgba(119,119,119,0) 25%,
+      rgba(119,119,119,0) 50%,
+      rgba(119,119,119,1) 50%,
+      rgba(119,119,119,1) 75%,
+      rgba(119,119,119,0) 75%,
+      rgba(119,119,119,0) 100%);
+  }
+}

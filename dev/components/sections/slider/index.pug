@@ -1,0 +1,30 @@
+include ../../slider/index.pug
+
+mixin section-slider
+  +b.SECTION.section._slider
+    +e.main
+      +b.monitor
+        +slider({
+          slider: 'slider'
+        })
+          +e.LI.slide
+            +b.action
+              +e.image
+                img(src="img/slide1.svg" alt="")
+              +e.content
+                +e.SPAN.title Выиграй!
+                +e.P.text гироскутер<br>и другие ценные<br>призы
+          +e.LI.slide
+            +b.action
+              +e.image
+                img(src="img/slide1.svg" alt="")
+              +e.content
+                +e.SPAN.title Выиграй!
+                +e.P.text гироскутер<br>и другие ценные<br>призы
+          +e.LI.slide
+            +b.action
+              +e.image
+                img(src="img/slide1.svg" alt="")
+              +e.content
+                +e.SPAN.title Выиграй!
+                +e.P.text гироскутер<br>и другие ценные<br>призы

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1461 1327">
+  <g data-name="Слой 2">
+    <g data-name="Слайд 2">
+      <path fill="#d6d6d6" d="M522 1107l-27 188 477 1-34-193-416 4z"/>
+      <path fill="#a7a7a7" d="M521 1107l-14 99h448l-18-103-416 4z"/>
+      <rect width="1461" height="1123" fill="#242424" rx="70"/>
+      <path fill="#fff" d="M89 78h1280v960H89z"/>
+      <circle cx="731" cy="37" r="16" fill="#505050"/>
+      <path fill="#f4f0ee" d="M406 1292h649a30 30 0 0 1 30 30v5H376v-5a30 30 0 0 1 30-30z"/>
+    </g>
+  </g>
+</svg>

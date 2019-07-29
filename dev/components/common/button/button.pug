@@ -1,0 +1,31 @@
+mixin button(data)
+  - if (data.type == 'button')
+    - if (data.ico)
+      +b.BUTTON.button(
+        class=((data.size) ? `_size-${data.size}` : ''))
+        +e.DIV.ico.ico(class=data.ico.sizeContainer)
+          +svg({
+            name: data.ico.name,
+            size: data.ico.size
+          })
+        span= data.name
+    - else
+      +b.BUTTON.button(
+        class=((data.size) ? `_size-${data.size}` : ''))
+        span= data.name
+  - else if (data.type == 'link')
+    - if (data.ico)
+      +b.A.button(
+        class=((data.size) ? `_size-${data.size}` : '') 
+        href=data.href)
+        +e.DIV.ico.ico(class=data.ico.sizeContainer)
+          +svg({
+            name: data.ico.name,
+            size: data.ico.size
+          })
+        span= data.name
+    - else
+      +b.A.button(
+        class=((data.size) ? `_size-${data.size}` : '')
+        href=data.href)
+        span= data.name

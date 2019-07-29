@@ -1,0 +1,30 @@
+@import url('button/style.less');
+@import url('link/style.less');
+@import url('logotype/style.less');
+
+.title {
+  display: block;
+  margin: 0 0 8px;
+  font-family: @font-caption;
+  font-size: @fontsize-title;
+  font-weight: 900;
+  line-height: 1;
+
+  strong {
+    font-weight: inherit;
+    // color: @colorHighlight;
+  }
+}
+
+.caption {
+  display: block;
+  margin: 0 0 16px;
+  font-family: @font-caption;
+  font-size: @fontsize-caption;
+  font-weight: 700;
+  line-height: 1.4;
+
+  &:last-child {
+    margin: 0;
+  }
+}

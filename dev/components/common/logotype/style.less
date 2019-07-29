@@ -1,0 +1,59 @@
+.logotype {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 0 5vh;
+  color: currentColor;
+  text-decoration: none;
+  transition: all @transition-speed-default;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    .logotype {
+      &__img {
+        transform: scale(.95);
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 72%;
+    height: 36vh;
+    transition: all @transition-speed-x2;
+    animation: float 3s ease-in-out infinite;
+
+    svg,
+    img {
+      .positionCenter();
+      max-width: 100%;
+      max-height: 100%;
+      pointer-events: none;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    right: 15%;
+    bottom: -10%;
+    width: 33%;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

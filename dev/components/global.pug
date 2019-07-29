@@ -1,0 +1,27 @@
+include !bemto/index.pug
+
+-
+  var global = {
+    title: 'Пушки - Игрушки',
+    separator: ' | ',
+    description: 'Первый научно-развлекательный детский клуб',
+    lang: 'ru',
+    paths: {
+      images: 'img/',
+      pictures: 'pictures/',
+      icons() { return this.images+'symbols.svg' }
+    },
+    template: {
+      adaptive: true,
+      width: 1170
+    },
+    production: true
+  }
+  
+  function randomInt(min,max) {
+      return Math.floor(Math.random()*(max-min+1)+min);
+  }
+  
+  function toPrice(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }

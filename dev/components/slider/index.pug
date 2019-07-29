@@ -1,0 +1,14 @@
+mixin slider(data)
+  +b.slider(data-slider=data.slider)&attributes({'data-items': data.items})
+    - if (data.controls)
+      +e.controls(class=data.controlsStyle data-slider-controls)
+        +b.BUTTON.arrow._prev(data-slider-controls-prev)
+          +svg({
+            name: 'arrow'
+          })
+        +b.BUTTON.arrow._next(data-slider-controls-next)
+          +svg({
+            name: 'arrow'
+          })
+    +e.UL.slides(data-slider-slides)
+      block

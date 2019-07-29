@@ -1,0 +1,62 @@
+include field/field.pug
+include field/textarea.pug
+
+mixin formWrite
+  +b.FORM.form
+    +e.body
+      +e.line
+        +field({
+          type: 'text',
+          placeholder: 'Как вас зовут'
+        })
+        
+        +field({
+          type: 'text',
+          placeholder: 'Телефон',
+          masked: 'phone'
+        })
+        
+      +e.line
+        +field({
+          type: 'email',
+          placeholder: 'E-mail'
+        })
+        
+      +e.line
+        +textarea({
+          placeholder: 'Сообщение'
+        })
+        
+    +e.text
+      p. 
+        Нажимая на кнопку «Отправить» вы соглашаетесь на обработку персональных 
+        данных в соответствии с <a href="#">политикой конфиденциальности</a>.
+        
+    +e.submit
+      +b.BUTTON.button
+        span Отправить
+
+mixin formCall
+  +b.FORM.form._modal
+    +e.body
+      +e.line
+        +field({
+          type: 'text',
+          placeholder: 'Как вас зовут'
+        })
+        
+      +e.line
+        +field({
+          type: 'text',
+          placeholder: 'Телефон',
+          masked: 'phone'
+        })
+        
+    +e.text
+      p. 
+        Нажимая на кнопку «Отправить» вы соглашаетесь на обработку персональных 
+        данных в соответствии с <a href="#">политикой конфиденциальности</a>.
+        
+    +e.submit
+      +b.BUTTON.button(data-modal-send)
+        span Перезвоните мне!

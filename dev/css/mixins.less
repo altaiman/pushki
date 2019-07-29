@@ -1,0 +1,26 @@
+.positionCenter {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.positionCenter-X {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.positionCenter-Y {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.arrow(@color) {
+	width: 8px;
+	height: 8px;
+	content: '';
+	border-left: 2px solid @color;
+	border-bottom: 2px solid @color;
+}

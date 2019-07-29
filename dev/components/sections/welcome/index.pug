@@ -1,0 +1,24 @@
+mixin section-welcome
+  +b.SECTION.section._welcome
+    +e.side
+      +logotype
+      +b.navigator
+        +e.UL.list
+          +e.LI.item
+            a(href="#") Детская комната
+          +e.LI.item
+            a(href="#") Игровые автоматы
+          +e.LI.item
+            a(href="#") Виртуальная <br>реальность
+      +e.bottom-link
+        +b.say-block
+          span самое интересное!
+    +e.main._with-side
+      +e.top-buttons
+        +b.BUTTON.button-reserve
+          span <strong>Забронировать</strong> сейчас!
+        +b.BUTTON.button-calc
+          span <strong>Посчитать</strong> день<br>рождения
+      +b.girl
+        img(src="img/girl.svg" alt="Девушка")
+      
