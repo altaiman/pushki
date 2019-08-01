@@ -1,0 +1,82 @@
+.counter {
+  display: flex;
+  padding-top: 3vh;
+
+  &__summary {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    background: #ffffff;
+    margin: .889vh 1vw;
+    border-radius: .5vw;
+    color: #1B9373;
+    font-size: 4.62rem;
+    font-weight: bold;
+    text-align: center;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__button {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    font-size: 3.2rem;
+    font-weight: 900;
+    width: 3.9375vw;
+    height: 7vh;
+    background: none;
+    border: none;
+    margin: .5vw;
+    transition: all .2s;
+
+    &:active {
+      transform: scale(.9);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__button_minus {
+    background: url('../img/day-weekend.svg') no-repeat center;
+  }
+
+  &__button_plus {
+    background: url('../img/day.svg') no-repeat center;
+    color: #1B9373;
+  }
+}
+
+[data-before] {
+  &::before {
+    position: absolute;
+    z-index: 9;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 2.8rem;
+    font-weight: normal;
+    content: attr(data-before);
+    margin-bottom: .5vh;
+    color: #ffffff;
+  }
+}

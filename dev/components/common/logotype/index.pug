@@ -1,6 +1,21 @@
 mixin logotype
   +b.A.logotype(href="index.html" title=global.description)
     +e.DIV.img
-      img(src=global.paths.images+'logotype.svg' alt="ZHRV")
+      img(src=global.paths.images+'logotype.svg' alt="Пушки-Игрушки")
     +e.DIV.text
       p Первый научно-развлекательный детский клуб
+
+mixin logotype-pink
+  +b.A.logotype._pink(href="index.html" title=global.description)
+    +e.DIV.img
+      img(src=global.paths.images+'logotype-pink.svg' alt="Пушки-Игрушки")
+
+mixin logotype-stars
+  +b.A.logotype._stars(href="index.html" title=global.description)
+    +e.DIV.img
+      img(src=global.paths.images+'logotype.svg' alt="Пушки-Игрушки")
+
+mixin logotype-blue
+  +b.A.logotype._blue(href="index.html" title=global.description)
+    +e.DIV.img
+      img(src=global.paths.images+'logotype-blue.svg' alt="Пушки-Игрушки")

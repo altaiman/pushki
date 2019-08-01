@@ -1,68 +1,32 @@
 .field {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 50px;
-  margin: 0 15px;
-  padding: 10px 0 15px;
-  // border-bottom: 1px solid @colorHighlightDark;
+  display: block;
 
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
+  &__name {
+    display: block;
+    text-align: center;
+    font-size: 4.62rem;
+    margin: 0 0 1.5vh;
   }
 
   &__input {
-    width: calc(~'100% - 24px');
-    height: 100%;
-    padding-right: 8px;
+    width: 100%;
+    height: 5vh;
 
-    input,
-    textarea {
+    input {
       display: block;
       width: 100%;
-      padding: 0;
-      border: none;
+      height: 100%;
       background: none;
-      transition: all .16s;
+      border: .16vw solid #ffffff;
+      border-radius: .75vw;
+      font-size: 2.8rem;
+      padding: 0 1vw;
+      transition: all .2s;
 
       &:focus {
         outline: none;
+        border-color: #FCD64C;
       }
-
-      &:hover,
-      &:focus {
-        // color: @colorHighlightDark;
-      }
-
-      &::placeholder {
-        color: currentColor;
-      }
-    }
-
-    textarea {
-      resize: none;
-      height: 100%;
-    }
-
-  }
-}
-
-.field_text {
-  height: 80px;
-
-  .field {
-    &__input {
-      padding: 0;
-      width: 100%;
     }
   }
-}
-
-.field_size-s {
-  height: 56px;
 }

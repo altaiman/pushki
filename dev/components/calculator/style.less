@@ -1,0 +1,127 @@
+@import url('calendar/style.less');
+@import url('counter/style.less');
+
+.calculator {
+  position: relative;
+  padding: 12vh 1.5vw 4vh;
+  width: 46.8vw;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 2vw;
+
+  &__content {
+    padding: 8vh 5.25vw;
+    background: #1B9373;
+    border-radius: 1vw;
+  }
+
+  &__title {
+    position: absolute;
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #1B9373;
+    font-size: 4.62rem;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+
+    strong {
+      display: block;
+      color: #ffffff;
+      background: #1B9373;
+    }
+  }
+
+  &__caption {
+    font-size: 4.62rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 4.5vh;
+
+    span {
+      display: inline-block;
+      padding: .1vh 1.6vw .4vh;
+      max-width: 28.7vw;
+      color: #1B9373;
+      background: #ffffff;
+      border-radius: .8vw;
+    }
+  }
+
+  &__caption_no-margin {
+    margin-bottom: 0;
+  }
+
+  &__block {
+    margin-bottom: 4vh;
+    padding-bottom: 4vh;
+    border-bottom: .5vh solid #ffffff;
+
+    &:last-child {
+      border: none;
+      margin: 0;
+      padding-bottom: 1vh;
+    }
+  }
+
+  &__text {
+    font-size: 2.8rem;
+    margin: 0 0 3.5vh;
+
+    p {
+      margin: .5vh 0;
+    }
+  }
+
+  &__text_center {
+    text-align: center;
+  }
+
+  &__submit {
+    display: block;
+    width: 100%;
+  }
+
+  &__button {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 10vh;
+    white-space: nowrap;
+    font-size: 4.62rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1B9373;
+    background-color: transparent;
+    // background-image: url('../img/submit.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    padding: 0;
+    transition: all .2s;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: -.2vh;
+      right: 0;
+      bottom: -.2vh;
+      content: '';
+      background-image: url('../img/submit.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      color: #FCD64C;
+    }
+  }
+}

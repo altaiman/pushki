@@ -76,10 +76,10 @@
   &::before {
     position: absolute;
     left: 50%;
-    top: -2vh;
-    width: 9.8vw;
+    top: -3vh;
+    width: 24vw;
     height: 38vh;
-    margin-left: -15vw;
+    margin-left: -9vw;
     transform: translateX(-50%);
     content: '';
     background-image: url('../img/girl-before.svg');
@@ -92,12 +92,117 @@
     position: absolute;
     left: 50%;
     top: -8vh;
-    width: 13.24vw;
+    width: 15.7vw;
     height: 34.3vh;
     margin-left: 17vw;
     transform: translateX(-50%);
     content: '';
     background-image: url('../img/girl-after.svg');
+    background-repeat: no-repeat;
+    animation: floatMargin 3s 1.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  img {
+    position: absolute;
+    left: 5vw;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.girl_vr {
+  img {
+    left: auto;
+    right: 3vw;
+    bottom: 2vh;
+    height: 57.4vh;
+  }
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    top: -3vh;
+    width: 24vw;
+    height: 38vh;
+    margin-left: -9vw;
+    transform: translateX(-50%);
+    content: '';
+    background-image: url('../img/girl-before.svg');
+    background-repeat: no-repeat;
+    animation: floatMargin 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: -8vh;
+    width: 15.7vw;
+    height: 34.3vh;
+    margin-left: 17vw;
+    transform: translateX(-50%);
+    content: '';
+    background-image: url('../img/girl-after.svg');
+    background-repeat: no-repeat;
+    animation: floatMargin 3s 1.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+
+.girl_pink {
+
+  &::before {
+    top: -3vh;
+    margin-left: -9vw;
+    width: 24vw;
+    height: 46vh;
+    background-image: url('../img/girl-before-pink.svg');
+  }
+
+  &::after {
+    background-image: url('../img/girl-after-pink.svg');
+  }
+
+  img {
+    left: auto;
+    right: 8vw;
+    bottom: 0;
+    height: 60vh;
+  }
+}
+
+.man {
+  position: relative;
+  height: 56vh;
+  margin-bottom: 2vh;
+  transition: all .4s;
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    top: -37vh;
+    width: 37.2vw;
+    height: 49vh;
+    margin-left: -2vw;
+    transform: translateX(-50%);
+    content: '';
+    background-image: url('../img/man-before.svg');
+    background-repeat: no-repeat;
+    animation: floatMargin 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: -30vh;
+    width: 26vw;
+    height: 44vh;
+    margin-left: 13vw;
+    transform: translateX(-50%);
+    content: '';
+    background-image: url('../img/man-after.svg');
     background-repeat: no-repeat;
     animation: floatMargin 3s 1.5s ease-in-out infinite;
     pointer-events: none;

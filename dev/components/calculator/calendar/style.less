@@ -1,0 +1,148 @@
+.calendar {
+  .datepicker {
+    font-family: @font-text, sans-serif;
+    width: 100%;
+    border: none;
+    background: none;
+    margin-bottom: -1.5vh;
+  }
+
+  .datepicker--nav {
+    border: none;
+  }
+
+  .datepicker--nav-action {
+    display: none;
+  }
+
+  .datepicker--nav-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 3.2rem;
+    pointer-events: none;
+  }
+
+  .datepicker--day-name {
+    font-size: 2.8rem;
+    text-transform: none;
+    color: #ffffff;
+  }
+
+  .datepicker--cell-day {
+    position: relative;
+    z-index: 3;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #1B9373;
+    background: transparent;
+    width: 12%;
+    height: 7vh;
+    margin: 0 1.33% 1.5vh;
+    transition: all .2s;
+    transform-origin: center;
+
+    &:hover {
+      color: #FCD64C;
+      background: none;
+      transform: rotate(3deg);
+    }
+
+    &.-other-month- {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    &.-weekend- {
+      color: #ffffff;
+
+      &::before {
+        background: url('../img/day-weekend.svg') no-repeat center;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        color: #FCD64C;
+      }
+    }
+
+    &.-current- {
+      color: #1B9373;
+
+      &.-weekend- {
+        color: #ffffff;
+      }
+
+      &:hover {
+        color: #FCD64C;
+      }
+    }
+
+    &.-selected- {
+      color: currentColor;
+      pointer-events: none;
+      background: #FCD64C;
+
+      &.-focus- {
+        background: #FCD64C;
+      }
+
+      &.-current- {
+        color: currentColor;
+        background: #FCD64C;
+      }
+
+      &.-weekend- {
+        color: #FCD64C;
+      }
+    }
+
+    &::before {
+      .positionCenter();
+      z-index: -1;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: url('../img/day.svg') no-repeat center;
+    }
+
+    &::after {
+      .positionCenter();
+      z-index: -1;
+      width: 65%;
+      height: 65%;
+      content: '';
+      background: #ffffff;
+      border-radius: .2vw;
+      transition: all .2s;
+    }
+
+    &:nth-child(1),
+    &:nth-child(7n + 8) {
+      margin-left: 0;
+    }
+
+    &:nth-child(7n) {
+      margin-right: 0;
+    }
+  }
+
+  .datepicker--day-name {
+    width: 12%;
+    margin: 0 1.33% .3vh;
+    flex: none;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

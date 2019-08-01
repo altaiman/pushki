@@ -46,6 +46,43 @@
   }
 }
 
+.logotype_pink {
+  margin: 0 0 2vh;
+
+  .logotype {
+    &__img {
+      width: 84.5%;
+      height: 41vh;
+    }
+  }
+}
+
+.logotype_stars {
+  .logotype {
+    &__img {
+      &::after {
+        position: absolute;
+        left: 93%;
+        top: -3vh;
+        width: 9.5vw;
+        height: 23.7vh;
+        content: '';
+        background-image: url('../img/logotype-stars.svg');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.logotype_blue {
+  .logotype {
+    &__img {
+      width: 95%;
+      height: 34.45vh
+    }
+  }
+}
+
 @keyframes float {
 	0% {
 		transform: translatey(0px);

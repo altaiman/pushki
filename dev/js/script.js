@@ -119,47 +119,71 @@
     }
   })
 
+  // datepicker
+
+  $('#calendar').datepicker({
+      navTitles: {
+          days: 'MM',
+          months: 'yyyy',
+          years: 'yyyy1 - yyyy2'
+      }
+  })
+
+  $('.navigator__item a').on('click', function(e) {
+    e.preventDefault()
+
+    const room = $(this).attr('href')
+
+    $(`[data-room="${room}"]`).addClass('section__room_active')
+  })
+
+  $('.back').on('click', function(e) {
+    e.preventDefault()
+
+    $('.section__room_active').removeClass('section__room_active')
+  })
+
   // modals
 
-  $('[data-modal]').iziModal({
-    focusInput: false
-  })
-
-  $('[data-modal-open]').on('click', function(e) {
-    e.preventDefault()
-
-
-    const data = $(this).data('modal-open')
-    $(`[data-modal="${data}"]`).iziModal('open')
-  })
-
-  $('.header__menu').on('click', function(e) {
-    e.preventDefault()
-
-    $('.menu').addClass('menu_active')
-  })
-
-  $('.menu__close').on('click', function(e) {
-    e.preventDefault()
-
-    $('.menu_active').removeClass('menu_active')
-  })
-
-  $('[data-modal-send]').on('click', function(e) {
-    e.preventDefault()
-
-    $(this).closest('.modal').find('.modal__content').toggle()
-  })
+  // $('[data-modal]').iziModal({
+  //   focusInput: false
+  // })
+  //
+  // $('[data-modal-open]').on('click', function(e) {
+  //   e.preventDefault()
+  //
+  //
+  //   const data = $(this).data('modal-open')
+  //   $(`[data-modal="${data}"]`).iziModal('open')
+  // })
+  //
+  // $('.header__menu').on('click', function(e) {
+  //   e.preventDefault()
+  //
+  //   $('.menu').addClass('menu_active')
+  // })
+  //
+  // $('.menu__close').on('click', function(e) {
+  //   e.preventDefault()
+  //
+  //   $('.menu_active').removeClass('menu_active')
+  // })
+  //
+  // $('[data-modal-send]').on('click', function(e) {
+  //   e.preventDefault()
+  //
+  //   $(this).closest('.modal').find('.modal__content').toggle()
+  // })
 
   // mask
-
-  $('[data-masked]').each(function(i, input) {
-    const mask = $(input).data('masked')
-
-    switch (mask) {
-      case 'phone':
-        $(input).mask('+7 (000) 000-00-00')
-    }
-  })
+  //
+  // $('[data-masked]').each(function(i, input) {
+  //   const mask = $(input).data('masked')
+  //
+  //   switch (mask) {
+  //     case 'phone':
+  //       $(input).mask('+7 (000) 000-00-00')
+  //   }
+  // })
 
 })(window);

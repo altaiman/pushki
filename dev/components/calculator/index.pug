@@ -1,0 +1,41 @@
+include calendar/index.pug
+include counter/index.pug
+
+mixin calculator
+  +b.calculator
+    +e.title
+      span <strong>Калькулятор </strong>дня рождения
+    +e.content
+      +e.block
+        +e.caption
+          span 1. Выберете дату:
+        +calendar
+      +e.block
+        +e.caption._no-margin
+          span 2. Количество часов
+        +e.text._center
+          p. 
+            * минимальный заказ 2 часа<br> 
+            + 1 час в подарок при<br>
+            любом заказе
+        +counter
+      +e.block
+        +e.caption
+          span 3. Количество детей
+      +e.block
+        +e.caption
+          span 4. Оставьте свои контакты
+        +b.FORM.form
+          +e.line
+            +b.LABEL.field
+              +e.SPAN.name Контактный телефон
+              +e.DIV.input
+                input(type="text")
+          +e.line
+            +b.LABEL.field
+              +e.SPAN.name Как Вас зовут?
+              +e.DIV.input
+                input(type="text")
+        +e.submit
+          +e.BUTTON.button
+            span Отправить заявку
