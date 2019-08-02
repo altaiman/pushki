@@ -125,3 +125,139 @@
     }
   }
 }
+
+.range {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 2vh;
+
+  &::before {
+    position: absolute;
+    margin-top: -1.5vh;
+    left: 7.2vw;
+    top: 100%;
+    width: 2vw;
+    height: 3vh;
+    content: '';
+    background-image: url('../img/range-before.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    margin-top: -1.5vh;
+    right: 5vw;
+    top: 100%;
+    width: 8vw;
+    height: 3vh;
+    content: '';
+    background-image: url('../img/range-after.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__value {
+    position: absolute;
+    left: 27.5%;
+    top: 100%;
+    margin-top: 2.5vh;
+    font-size: 2.8rem;
+  }
+
+  &__input {
+    position: relative;
+    height: 5px;
+    width: calc(~'100% - 10vw');
+    background: #ffffff;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      width: 5px;
+      height: 2vw;
+      content: '';
+      left: 3.2vw;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #ffffff;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      width: 5px;
+      height: 2vw;
+      content: '';
+      right: 3.2vw;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #ffffff;
+    }
+
+    input {
+      display: block;
+      margin: 0 auto;
+      -webkit-appearance: none;  /* Override default CSS styles */
+      appearance: none;
+      width: 80%; /* Full-width */
+      height: 2vw; /* Specified height */
+      background: #d3d3d3; /* Grey background */
+      outline: none; /* Remove outline */
+      -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+      transition: opacity .2s;
+      opacity: 1;
+      background: none;
+      // border-left: 5px solid #ffffff;
+      // border-right: 5px solid #ffffff;
+
+      &::-webkit-slider-thumb {
+        margin-top: -1.66vw;
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: 2vw; /* Set a specific slider handle width */
+        height: 2vw; /* Slider handle height */
+        background: #ffffff;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    font-size: 3.2rem;
+    font-weight: 900;
+    width: 3.9375vw;
+    height: 7vh;
+    background: none;
+    border: none;
+    margin: .5vw;
+    transition: all .2s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__button_minus {
+    background: url('../img/day-weekend.svg') no-repeat center;
+  }
+
+  &__button_plus {
+    background: url('../img/day.svg') no-repeat center;
+    color: #1B9373;
+  }
+}

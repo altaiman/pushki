@@ -143,6 +143,30 @@
     $('.section__room_active').removeClass('section__room_active')
   })
 
+  $('.range__input input').on("input", function() {
+    $('.range__value').text(this.value);
+  }).trigger("change");
+
+  $('.range__button').on('click', function(e) {
+    e.preventDefault()
+
+    var range = $(this).closest('.range'),
+        input = $(range).find('input'),
+        value = Number($(input).val()),
+        maxValue = Number($(input).attr('max')),
+        minValue = Number($(input).attr('min'))
+
+    if ($(this).hasClass('range__button_minus')) {
+      if (value === minValue) return
+      $(input).val(--value)
+    } else {
+      if (value === maxValue) return
+      $(input).val(++value)
+    }
+
+    $(range).find('.range__value').text(value)
+  })
+
   // modals
 
   // $('[data-modal]').iziModal({

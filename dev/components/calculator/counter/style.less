@@ -38,10 +38,6 @@
     margin: .5vw;
     transition: all .2s;
 
-    &:active {
-      transform: scale(.9);
-    }
-
     &:focus {
       outline: none;
     }
@@ -77,6 +73,22 @@
     font-weight: normal;
     content: attr(data-before);
     margin-bottom: .5vh;
+    color: #ffffff;
+  }
+}
+
+[data-after] {
+  &::after {
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 2.8rem;
+    font-weight: normal;
+    content: attr(data-after);
+    margin-top: .5vh;
     color: #ffffff;
   }
 }
