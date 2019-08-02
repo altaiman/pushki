@@ -14,7 +14,7 @@
     // position: absolute;
     // bottom: 0;
     left: 1vw;
-    min-width: 50vw;
+    min-width: 55vw;
     // height: 46vh;
     padding: 1.87vh 1.05vw;
     background: #ffffff;
@@ -27,10 +27,23 @@
   &__offers {
     display: flex;
     align-items: center;
+    margin: 1vh 0 0;
   }
 
   &__offers-block {
-    width: 33.333%;
+    padding: 0 .5vw;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: 20%;
+    }
+  }
+
+  &__tickets {
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__title_calc {
@@ -156,10 +169,37 @@
 
   &__text-content {
     font-size: 3.2rem;
+    line-height: 1;
 
     p {
       margin: 0;
     }
+  }
+
+  &__text_offer {
+    width: auto;
+    margin: 0;
+    font-size: 2.1rem;
+    line-height: 1;
+
+    p {
+      margin: 0;
+    }
+
+    span {
+      display: block;
+    }
+
+    strong {
+      display: inline-block;
+      background: #FFD600;
+      padding: 0 .2vw;
+    }
+  }
+
+  &__text_offer-l {
+    font-size: 2.4rem;
+    line-height: 1.1;
   }
 
   &__image {

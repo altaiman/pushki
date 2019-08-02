@@ -309,6 +309,265 @@
   }
 }
 
+.offer {
+  position: relative;
+  margin-top: 2.5vh;
+  margin-bottom: 1vh;
+
+  &__title {
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    padding: .05vh .2vw;
+    font-size: 1.85rem;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  &__content {
+    padding: .2vh .2vw;
+    font-size: 1.6rem;
+    height: 6vh;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.2;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: .5vh;
+      width: 100%;
+      height: 0;
+      content: '';
+      border-bottom: .15vw dotted currentColor;
+    }
+
+    span {
+      position: relative;
+      z-index: 3;
+      display: inline-block;
+      background: #ffffff;
+
+      &:nth-child(1) {
+        padding-right: .2vw;
+      }
+
+      &:last-child {
+        padding-left: .2vw;
+      }
+    }
+  }
+}
+
+.offer_pink {
+  border: 2px solid #E65D9C;
+
+  .offer {
+    &__title {
+      &::before {
+        position: absolute;
+        z-index: -1;
+        left: -2px;
+        bottom: 0;
+        width: calc(~'100% + 4px');
+        height: 3.1vh;
+        content: '';
+        background-image: url('../img/offer-title-pink.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat-x;
+      }
+    }
+  }
+}
+
+.offer_pink-full {
+  &::before {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    margin-bottom: -1px;
+    bottom: 100%;
+    width: 100%;
+    height: 3.1vh;
+    content: '';
+    background-image: url('../img/offer-title-pink.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+  }
+
+  .offer {
+    &__content {
+      height: 4.5vh;
+      background: #E65D9C;
+      line-height: 1;
+      padding: 0 1vw;
+
+      p {
+        position: relative;
+        top: -1.8vh;
+        margin: 0;
+        font-size: 2.9rem;
+        font-weight: bold;
+        color: #ffffff;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.offer_blue {
+  border: 2px solid #346D98;
+
+  .offer {
+    &__title {
+      &::before {
+        position: absolute;
+        z-index: -1;
+        left: -2px;
+        bottom: 0;
+        width: calc(~'100% + 4px');
+        height: 3.1vh;
+        content: '';
+        background-image: url('../img/offer-title-blue.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat-x;
+      }
+    }
+  }
+}
+
+.offer_blue-full {
+  &::before {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    margin-bottom: -1px;
+    bottom: 100%;
+    width: 100%;
+    height: 3.1vh;
+    content: '';
+    background-image: url('../img/offer-title-blue.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+  }
+
+  .offer {
+    &__content {
+      height: 4.5vh;
+      background: #346D98;
+      line-height: 1;
+      padding: 0 .5vw;
+
+      p {
+        position: relative;
+        top: -2vh;
+        margin: 0;
+        font-size: 2.9rem;
+        font-weight: bold;
+        color: #ffffff;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.ticket {
+  position: relative;
+  z-index: 3;
+  height: 9.8vh;
+  font-size: 3.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 1vw;
+  line-height: .9;
+  margin: 0 1.2vw;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  span {
+    position: relative;
+    top: 1.5vh;
+  }
+
+  strong {
+    display: block;
+    font-size: 6.5rem;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-position: center;
+    background-repeat: repeat-x;
+  }
+}
+
+.ticket_time {
+  padding: 0 3.2vw;
+  height: 12vh;
+
+  span {
+    top: 2.1vh;
+  }
+}
+
+.ticket_yellow {
+  &::before {
+    background-image: url('../img/ticket-yellow.svg');
+  }
+}
+
+.ticket_blue {
+  color: #ffffff;
+
+  &::before {
+    background-image: url('../img/ticket-blue.svg');
+  }
+}
+
+.ticket_dark-blue {
+  color: #ffffff;
+
+  &::before {
+    background-image: url('../img/ticket-dark-blue.svg');
+  }
+}
+
+
 @keyframes floatMargin {
   0% {
     margin-top: 0;

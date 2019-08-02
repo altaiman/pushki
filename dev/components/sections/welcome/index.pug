@@ -35,33 +35,57 @@ mixin section-welcome
               <strong>- Сухой бассейн,</strong> с мостами и трамплинами; <br> 
               <strong>- Кинетическая песочница,</strong> с 3D-моделированием<br>
               <strong>- Интерактивная стена,</strong> с сенсорными играми!
-          //- +e.offers
-          //-   +e.offers-block
-          //-     +b.offer._pink
-          //-       +e.title
-          //-         span Пн, Вт, Ср, Чт, Пт
-          //-       +e.content
-          //-         +e.UL.list
-          //-           +e.LI.item
-          //-             span 1 час
-          //-             span 200₽
-          //-           +e.LI.item
-          //-             span безлимит
-          //-             span 300₽
-          //-         span (дети до 1 года - 100₽)
-          //- 
-          //-   +e.offers-block
-          //-     +b.offer._blue
-          //-       +e.title
-          //-         span Сб, Вс - выходные
-          //-       +e.content
-          //-         +e.UL.list
-          //-           +e.LI.item
-          //-             span 1 час
-          //-             span 250₽
-          //-           +e.LI.item
-          //-             span безлимит
-          //-             span 400₽
+          +e.offers
+            +e.offers-block
+              +b.offer._pink
+                +e.title
+                  span Пн, Вт, Ср, Чт, Пт
+                +e.content
+                  +e.UL.list
+                    +e.LI.item
+                      span <strong>1 час</strong>
+                      span 200₽
+                    +e.LI.item
+                      span <strong>безлимит</strong>
+                      span 300₽
+                  span (дети до 1 года - 100₽)
+          
+            +e.offers-block
+              +b.offer._blue
+                +e.title
+                  span Сб, Вс - выходные
+                +e.content
+                  +e.UL.list
+                    +e.LI.item
+                      span 1 час
+                      span 250₽
+                    +e.LI.item
+                      span безлимит
+                      span 400₽
+            +e.offers-block
+              +e.text._offer
+                p. 
+                  Многодетным семьям<br> 
+                  и детям с ограниченными возможностями 
+                  <span><strong>скидка 50%</strong></span>
+                  (при предъявлении документа)
+                  
+          +e.text._offer._offer-l
+            p. 
+              <strong>- День рождения!</strong> <b>Идеальное место для праздника вашего ребёнка!</b><br>
+              игровая зона на 6 гостей и праздничная комната!
+          
+          +e.offers
+            +e.offers-block
+              +b.offer._pink-full
+                +e.content
+                  p будние <span>1000₽/час</span>
+          
+            +e.offers-block
+              +b.offer._blue-full
+                +e.content
+                  p выходные <span>1500₽/час</span>
+                      
       +e.main._with-side
         +e.top-buttons
           +b.BUTTON.button-reserve
@@ -86,6 +110,14 @@ mixin section-welcome
                  автосимуляторов?<br>
               <strong>- Крутые виражи на автосимуляторе XD-motion</strong><br>
                 кабина поворачивается вслед за виртуальным авто
+          +e.tickets
+            +b.ticket._yellow
+              span 30₽
+            +b.ticket._blue
+              span 40₽
+            +b.ticket._dark-blue
+              span 50₽
+                
       +e.main._with-side
         +e.top-buttons
           +b.BUTTON.button-reserve
@@ -109,6 +141,13 @@ mixin section-welcome
                 Beatsaber именно для вас, разрезайте мечами пространство
                 под избранный бит!<br>
               <strong>- Можно играть вдвоём!</strong><br>
+              
+          +e.tickets
+            +b.ticket._yellow._time
+              span 7 минут <strong>150₽</strong>
+            +b.ticket._blue._time
+              span 14 минут <strong>300₽</strong>
+              
       +e.main._with-side
         +e.top-buttons
           +b.BUTTON.button-reserve
