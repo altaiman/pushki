@@ -1,5 +1,10 @@
 mixin section-welcome
   +b.SECTION.section._welcome
+    +e.top-buttons
+      +b.A.button-reserve(href="#calculator")
+        span <strong>Забронировать</strong> сейчас!
+      +b.A.button-calc(href="#calculator")
+        span <strong>Посчитать</strong> день<br>рождения
     +e.side
       +logotype
       +b.navigator
@@ -14,11 +19,6 @@ mixin section-welcome
         +b.say-block
           span самое интересное!
     +e.main._with-side
-      +e.top-buttons
-        +b.BUTTON.button-reserve
-          span <strong>Забронировать</strong> сейчас!
-        +b.BUTTON.button-calc
-          span <strong>Посчитать</strong> день<br>рождения
       +b.girl
         img(src="img/girl.svg" alt="Девушка")
           
@@ -87,11 +87,6 @@ mixin section-welcome
                   p выходные <span>1500₽/час</span>
                       
       +e.main._with-side
-        +e.top-buttons
-          +b.BUTTON.button-reserve
-            span <strong>Забронировать</strong> сейчас!
-          +b.BUTTON.button-calc
-            span <strong>Посчитать</strong> день<br>рождения
         +b.girl._pink
           img(src="img/girl.svg" alt="Девушка")
             
@@ -112,18 +107,13 @@ mixin section-welcome
                 кабина поворачивается вслед за виртуальным авто
           +e.tickets
             +b.ticket._yellow
-              span 30₽
+              span <strong>40₽</strong>
             +b.ticket._blue
-              span 40₽
+              span <strong>50₽</strong>
             +b.ticket._dark-blue
-              span 50₽
+              span <strong>60₽</strong>
                 
       +e.main._with-side
-        +e.top-buttons
-          +b.BUTTON.button-reserve
-            span <strong>Забронировать</strong> сейчас!
-          +b.BUTTON.button-calc
-            span <strong>Посчитать</strong> день<br>рождения
         +b.man
           img(src="img/man.svg" alt="Player")
             
@@ -149,11 +139,6 @@ mixin section-welcome
               span 14 минут <strong>300₽</strong>
               
       +e.main._with-side
-        +e.top-buttons
-          +b.BUTTON.button-reserve
-            span <strong>Забронировать</strong> сейчас!
-          +b.BUTTON.button-calc
-            span <strong>Посчитать</strong> день<br>рождения
         +b.girl._vr
           img(src="img/girl-vr.svg" alt="Девушка-vr")
       

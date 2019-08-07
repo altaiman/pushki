@@ -17,6 +17,8 @@
     </header>
     <main class="page__content" role="main">
       <section class="section section_welcome">
+        <div class="section__top-buttons"><a class="button-reserve" href="#calculator"><span><strong>Забронировать</strong> сейчас!</span></a><a class="button-calc" href="#calculator"><span><strong>Посчитать</strong> день<br>рождения</span></a>
+        </div>
         <div class="section__side"><a class="logotype" href="index.html" title="Первый научно-развлекательный детский клуб">
           <div class="logotype__img"><img src="img/logotype.svg" alt="Пушки-Игрушки"/>
           </div>
@@ -39,12 +41,6 @@
           </div>
         </div>
         <div class="section__main section__main_with-side">
-          <div class="section__top-buttons">
-            <button class="button-reserve"><span><strong>Забронировать</strong> сейчас!</span>
-            </button>
-            <button class="button-calc"><span><strong>Посчитать</strong> день<br>рождения</span>
-            </button>
-          </div>
           <div class="girl"><img src="img/girl.svg" alt="Девушка"/>
           </div>
         </div>
@@ -131,12 +127,6 @@
             </div>
           </div>
           <div class="section__main section__main_with-side">
-            <div class="section__top-buttons">
-              <button class="button-reserve"><span><strong>Забронировать</strong> сейчас!</span>
-              </button>
-              <button class="button-calc"><span><strong>Посчитать</strong> день<br>рождения</span>
-              </button>
-            </div>
             <div class="girl girl_pink"><img src="img/girl.svg" alt="Девушка"/>
             </div>
           </div>
@@ -160,22 +150,16 @@
                 </p>
               </div>
               <div class="section__tickets">
-                <div class="ticket ticket_yellow"><span>30₽</span>
+                <div class="ticket ticket_yellow"><span><strong>40₽</strong></span>
                 </div>
-                <div class="ticket ticket_blue"><span>40₽</span>
+                <div class="ticket ticket_blue"><span><strong>50₽</strong></span>
                 </div>
-                <div class="ticket ticket_dark-blue"><span>50₽</span>
+                <div class="ticket ticket_dark-blue"><span><strong>60₽</strong></span>
                 </div>
               </div>
             </div>
           </div>
           <div class="section__main section__main_with-side">
-            <div class="section__top-buttons">
-              <button class="button-reserve"><span><strong>Забронировать</strong> сейчас!</span>
-              </button>
-              <button class="button-calc"><span><strong>Посчитать</strong> день<br>рождения</span>
-              </button>
-            </div>
             <div class="man"><img src="img/man.svg" alt="Player"/>
             </div>
           </div>
@@ -207,12 +191,6 @@
             </div>
           </div>
           <div class="section__main section__main_with-side">
-            <div class="section__top-buttons">
-              <button class="button-reserve"><span><strong>Забронировать</strong> сейчас!</span>
-              </button>
-              <button class="button-calc"><span><strong>Посчитать</strong> день<br>рождения</span>
-              </button>
-            </div>
             <div class="girl girl_vr"><img src="img/girl-vr.svg" alt="Девушка-vr"/>
             </div>
           </div>
@@ -323,7 +301,7 @@
           </div>
           <div class="section__title section__title_calc2"><span>День рождения</span>
           </div>
-          <div class="calculator">
+          <div class="calculator" id="calculator">
             <div class="calculator__title"><span><strong>Калькулятор </strong>дня рождения</span>
             </div>
             <div class="calculator__content">
@@ -361,7 +339,7 @@
                   <button class="range__button range__button_minus" data-after="вычесть">-
                   </button>
                   <div class="range__input">
-                    <input type="range" min="1" max="20" value="5"/><span class="range__value">5</span>
+                    <input type="range" min="1" max="10" value="5"/><span class="range__value">5</span>
                   </div>
                   <button class="range__button range__button_plus" data-after="добавить">+
                   </button>
