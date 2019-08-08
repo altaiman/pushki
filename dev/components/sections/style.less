@@ -8,6 +8,31 @@
   justify-content: space-between;
   transition: all .4s;
 
+  &__footer {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      z-index: 9999;
+      left: -.5%;
+      right: -.5%;
+      top: 0;
+      height: 3px;
+      width: 101%;
+      content: '';
+      background-size: 6.21vw;
+      background-image: linear-gradient(to right,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,1) 25%,
+        rgba(255,255,255,0) 25%,
+        rgba(255,255,255,0) 50%,
+        rgba(255,255,255,1) 50%,
+        rgba(255,255,255,1) 75%,
+        rgba(255,255,255,0) 75%,
+        rgba(255,255,255,0) 100%);
+    }
+  }
+
   &__content {
     position: relative;
     z-index: 9;
@@ -374,9 +399,52 @@
 }
 
 .section_calc {
+  flex-direction: column;
   padding: 6vh 0;
   color: #ffffff;
   background: #1B9373;
+
+  .section {
+    &__main {
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        position: absolute;
+        left: 2vw;
+        top: 0;
+        height: 100%;
+        width: 22vw;
+        content: '';
+        background-image: url('../img/calculator-before.svg');
+        background-repeat: no-repeat;
+        background-position: left center;
+      }
+
+      &::after {
+        position: absolute;
+        right: 4vw;
+        top: 6vh;
+        height: calc(~'100% - 6vh');
+        width: 21vw;
+        content: '';
+        background-image: url('../img/calculator-after.svg');
+        background-repeat: no-repeat;
+        background-position: right center;
+      }
+    }
+  }
+}
+
+.address {
+  font-size: 4.63rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3vh;
+
+  p {
+    margin: 0;
+  }
 }
 
 .section_welcome {
@@ -512,5 +580,47 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain;
+  }
+}
+
+.subscribe {
+  text-align: center;
+
+  &__title {
+    margin: 1.5vh 0;
+    font-size: 8.34rem;
+    font-weight: bold;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    width: 7.8vw;
+    height: 7.8vw;
+    margin: 0 .5vw;
+    background: #ffffff;
+    font-size: 0;
+
+    img {
+      .positionCenter();
+      max-width: 70%;
+      max-height: 70%;
+    }
+  }
+
+  &__item_vk {
+    border-radius: 50%;
+  }
+
+  &__item_inst {
+    border-radius: 2vw;
   }
 }
