@@ -255,14 +255,40 @@
     &:last-child {
       margin-right: 0;
     }
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      transition: all .2s;
+    }
+
+    &:hover {
+      color: #fcd64c;
+    }
+
+    &:active {
+      &::before {
+        transform: scale(.9);
+      }
+    }
   }
 
   &__button_minus {
-    background: url('../img/day-weekend.svg') no-repeat center;
+    &::before {
+      background: url('../img/day-weekend.svg') no-repeat center;
+    }
   }
 
   &__button_plus {
-    background: url('../img/day.svg') no-repeat center;
     color: #1B9373;
+
+    &::before {
+      background: url('../img/day.svg') no-repeat center;
+    }
   }
 }
