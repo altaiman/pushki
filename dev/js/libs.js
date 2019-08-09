@@ -3,3 +3,4 @@
 @@include('vendor/flickity.pkgd.min.js');
 @@include('vendor/jquery.fancybox.min.js');
 @@include('vendor/datepicker.min.js');
+@@include('vendor/jquery.mask.min.js');
