@@ -608,6 +608,23 @@
     margin: 0 .5vw;
     background: #ffffff;
     font-size: 0;
+    transition: all .2s;
+
+    &:hover {
+      transform: scale(.95);
+    }
+
+    a {
+      position: absolute;
+      z-index: 9;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      text-decoration: none;
+      color: currentColor;
+    }
 
     img {
       .positionCenter();
