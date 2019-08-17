@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1918px" height="1327px" viewBox="0 0 1918 1327" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>monitor</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="monitor">
+            <rect id="Rectangle" fill="#1B9373" fill-rule="nonzero" x="0" y="0" width="319" height="1123"></rect>
+            <rect id="Rectangle" fill="#1B9373" fill-rule="nonzero" x="1599" y="0" width="319" height="1123"></rect>
+            <polygon id="Path" fill="#D6D6D6" points="752 1107 725 1295 1202 1296 1168 1103"></polygon>
+            <polygon id="Path" fill="#A7A7A7" points="751 1107 737 1206 1185 1206 1167 1103"></polygon>
+            <path d="M300,0 L1621,0 C1659.65993,-7.10171439e-15 1691,31.3400675 1691,70 L1691,1053 C1691,1091.65993 1659.65993,1123 1621,1123 L300,1123 C261.340068,1123 230,1091.65993 230,1053 L230,70 C230,31.3400675 261.340068,7.10171439e-15 300,0 Z M319,78 L319,1038 L1599,1038 L1599,78 L319,78 Z" id="Combined-Shape" fill="#242424"></path>
+            <circle id="Oval" fill="#505050" cx="961" cy="37" r="16"></circle>
+            <path d="M636,1292 L1285,1292 C1301.56854,1292 1315,1305.43146 1315,1322 L1315,1327 L606,1327 L606,1322 C606,1305.43146 619.431458,1292 636,1292 Z" id="Path" fill="#F4F0EE"></path>
+        </g>
+    </g>
+</svg>
