@@ -121,6 +121,8 @@
 
   // datepicker
 
+  var disabledDays = [0, 6];
+
   $('#calendar').datepicker({
       navTitles: {
           days: 'MM',
